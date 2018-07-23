@@ -1,6 +1,5 @@
 const path = require('path');
 var config = {
-  mode: 'production',
   entry: './src/index.js', // entry point
   output: {
     path: path.join(__dirname, "online/dist"), // place where bundled app will be served
