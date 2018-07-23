@@ -1,0 +1,53 @@
+.contact {
+  padding-left: 20px;
+  height: 50vh;
+  background-image: url('images/map.jpg');
+}
+
+.contact > h1 {
+  font-size: 3rem;
+  font-family: 'bebas_neueregular';
+  color: rgb(34, 86, 103);
+}
+
+.body {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* repeat = as many times as you can fit */
+ /* auto-fit = fit as many items on the line as possible, go bigger if you need to */
+ /*minmax = (min size, max size) = the minimum size the column should be is 300px, but if there's space then give them all 1fr of that width. */
+  grid-gap: 10px;
+}
+
+.form-input {
+  justify-self: start;
+  background-color: rgba(255,255,255,.8);
+  font-size: 1rem;
+  font-family: 'ralewaylight';
+  padding: 10px 10px;
+  margin: 10px;
+  width: 80%;
+  border: 1px solid #ced4da;
+}
+.form-input:focus {
+  border: 1px solid #225667;
+}
+
+textarea {
+  min-height: 80px;
+  max-height: 150px;
+}
+
+
+#submit-button {
+  background-color: none;
+  border: 1px solid #225667;
+  color: #225667;
+  font-size: 1.2rem;
+  font-family: 'ralewaymedium';
+}
+#submit-button:hover {
+  background-color: #225667;
+  color: white;
+}
+
