@@ -1,5 +1,7 @@
 const path = require('path');
-var config = {
+
+//Browser Config
+var browserConfig = {
   entry: './src/index.js', // entry point
   output: {
     path: path.join(__dirname, "online/dist"), // place where bundled app will be served
@@ -45,4 +47,8 @@ var config = {
     ]
   }
 }
-module.exports = config;
+//Server Config
+var serverConfig =  {
+  
+}
+module.exports = browserConfig;
