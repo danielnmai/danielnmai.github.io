@@ -1,5 +1,6 @@
-const path = require('path');
-
+const path = require('path')
+const webpack = require('webpack')
+const nodeExternals = require('webpack-node-externals')
 //Browser Config
 var browserConfig = {
   entry: './src/index.js', // entry point
@@ -45,10 +46,15 @@ var browserConfig = {
         }
       }
     ]
-  }
+  },
+  plugins: [
+    new webpack.DefinePlugin({
+      __isBrowser__: "true"
+    })
+  ]
 }
 //Server Config
 var serverConfig =  {
-  
+
 }
 module.exports = browserConfig;
