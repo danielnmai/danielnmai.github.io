@@ -55,6 +55,24 @@ var browserConfig = {
 }
 //Server Config
 var serverConfig =  {
+  entry: './src/server/index.js',
+  target: 'node',
+  externals: [nodeExternals()],
+  output: {
+    path: __dirname,
+    filename: 'server.js',
+    publicPath: '/'
+  },
+  module: {
+    rules:[
+      { test: /\.jsx?$/, use: 'babel-loader'}
+    ]
+  },
+  plugins: [
+    new webpack.DefinePlugin({
+      __isBrowser__: "false"
+    })
+  ]
 
 }
-module.exports = browserConfig;
+module.exports = [browserConfig, serverConfig];
