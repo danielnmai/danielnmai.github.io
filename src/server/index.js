@@ -1,7 +1,7 @@
 import express from "express"
 import cors from "cors"
 import { renderToString } from "react-dom/server"
-import App from '../App'
+import App from '../shared/App'
 import React from 'react'
 
 const app = express()

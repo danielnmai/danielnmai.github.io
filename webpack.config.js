@@ -21,7 +21,7 @@ var browserConfig = {
         loader: 'babel-loader',
         query: {
           presets: ['env', 'react'],
-          plugins: ['transform-decorators-legacy', 'transform-class-properties']
+          plugins: ['transform-decorators-legacy', 'transform-class-properties', 'transform-object-rest-spread']
         }
       }, {
         test: /\.css$/,
