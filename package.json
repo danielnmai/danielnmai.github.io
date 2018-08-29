@@ -4,7 +4,7 @@
   "description": "Daniel Mai Personal Website",
   "main": "./src/index.js",
   "scripts": {
-    "start": "webpack-dev-server --hot && nodemon server.js",
+    "start": "webpack-dev-server --hot",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production",
     "deploy": "gh-pages -b master -d online/dist/",
