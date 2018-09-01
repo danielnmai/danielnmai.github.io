@@ -4,7 +4,7 @@
   "description": "Daniel Mai Personal Website",
   "main": "./src/index.js",
   "scripts": {
-    "start": "webpack --watch & node server.js",
+    "start": "webpack --watch --mode development & node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production",
     "deploy": "gh-pages -b master -d online/dist/",

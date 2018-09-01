@@ -12,12 +12,10 @@ const app = express()
 const config = require('../../webpack.config.js')
 const compiler = webpack(config)
 
-
-
-
 // We're going to serve up the public
 // folder since that's where ourm
 // client bundle.js file will end up.
+
 app.use(webpackDevMiddleware(compiler, {
     publicPath: config[0].output.publicPath
 }))
@@ -26,21 +24,7 @@ app.use(express.static("online/dist/"))
 
 app.get("/", (req, res, next) => {
 
-  res.send(
-    `
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <title>SSR with RR</title>
-        <script src='/bundle.js' defer></script>
-      </head>
-
-      <body>
-        <div id="app"></div>
-      </body>
-    </html>
-    `
-  )
+  res.sendFile(path.resolve('./src/index.html'))
 })
 
 app.listen(3000, () => {
