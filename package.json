@@ -4,8 +4,9 @@
   "description": "Daniel Mai Personal Website",
   "main": "./src/index.js",
   "scripts": {
-    "start": "webpack-dev-server --hot",
+    "start": "webpack --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "node server.js",
     "build": "webpack --mode production",
     "deploy": "gh-pages -b master -d online/dist/",
     "transpile": "babel src -d dist --copy-files",
@@ -40,7 +41,6 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "typeit": "^5.10.0",
-    "webpack": "^3.10.0",
     "webpack-dev-server": "^2.9.7"
   },
   "devDependencies": {
@@ -56,6 +56,9 @@
     "img-loader": "^3.0.0",
     "style-loader": "^0.19.1",
     "url-loader": "^0.6.2",
+    "webpack": "^4.17.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-middleware": "^3.2.0",
     "webpack-node-externals": "^1.7.2"
   }
 }

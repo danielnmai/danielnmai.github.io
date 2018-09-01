@@ -6,7 +6,8 @@ var browserConfig = {
   entry: './src/index.js', // entry point
   output: {
     path: path.join(__dirname, "online/dist"), // place where bundled app will be served
-    filename: 'bundle.js', 
+    filename: 'bundle.js',
+    publicPath: '/'
   },
   devServer: {
     contentBase: './src',
@@ -65,7 +66,15 @@ var serverConfig =  {
   },
   module: {
     rules:[
-      { test: /\.jsx?$/, use: 'babel-loader'}
+      {
+        test: /\.jsx?$/, // search for js files
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+        query: {
+          presets: ['env', 'react'],
+          plugins: ['transform-decorators-legacy', 'transform-class-properties', 'transform-object-rest-spread']
+        }
+      }
     ]
   },
   plugins: [
@@ -75,4 +84,4 @@ var serverConfig =  {
   ]
 
 }
-module.exports = [browserConfig, serverConfig];
+module.exports = browserConfig;
