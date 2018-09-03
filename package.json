@@ -4,7 +4,8 @@
   "description": "Daniel Mai Personal Website",
   "main": "./src/index.js",
   "scripts": {
-    "start": "webpack --watch --mode development & node server.js",
+    "start": "webpack --watch --mode development",
+    "server": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production",
     "deploy": "gh-pages -b master -d online/dist/",
@@ -50,6 +51,7 @@
     "babel-preset-mobx": "^1.0.2",
     "babel-preset-stage-0": "^6.24.1",
     "css-loader": "^0.28.8",
+    "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.6",
     "gh-pages": "^1.2.0",
     "img-loader": "^3.0.0",

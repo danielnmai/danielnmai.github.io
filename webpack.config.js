@@ -9,11 +9,13 @@ var browserConfig = {
     filename: 'bundle.js',
     publicPath: '/'
   },
-  devServer: {
-    contentBase: './src',
-    inline: true, // autorefresh
-    port: 3000 // development port server
-  },
+  //Using webpack middleware with express server (for SSR),
+  //so no longer need webpack-dev-server
+  // devServer: {
+  //   contentBase: './src',
+  //   inline: true, // autorefresh
+  //   port: 3000 // development port server
+  // },
   module: {
     rules: [
       {
@@ -73,6 +75,27 @@ var serverConfig =  {
         query: {
           presets: ['env', 'react'],
           plugins: ['transform-decorators-legacy', 'transform-class-properties', 'transform-object-rest-spread']
+        }
+      }, {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      }, {
+        test: /\.(png|jpg|gif)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192
+            }
+          }
+        ]
+      }, {
+        test: /\.(woff|woff2)$/,
+        use: {
+          loader: "url-loader",
+          options: {
+            limit: 50000
+          }
         }
       }
     ]
