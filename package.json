@@ -6,10 +6,8 @@
   "scripts": {
     "start": "webpack-dev-server --hot",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --mode production",
+    "build": "webpack -p",
     "deploy": "gh-pages -b master -d online/dist/",
-    "transpile": "babel src -d dist --copy-files",
-    "prepublishOnly": "npm run transpile",
     "publish-web": "npm run build && npm run deploy"
   },
   "keywords": [
