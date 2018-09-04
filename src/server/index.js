@@ -26,11 +26,32 @@ app.use(webpackDevMiddleware(compiler, {
 app.use(express.static("online/dist/"))
 
 app.get("/", (req, res, next) => {
-  // const markup = renderToString(
-  //   <App />
-  // )
+  const markup = renderToString(
+    <App />
+  )
 
-  res.sendFile(path.resolve('./src/index.html'))
+  res.send(
+    `
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Personal Website">
+    <meta name="author" content="Daniel Mai">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Mai</title>
+</head>
+<body>
+    <!-- Root Element -->
+    <div id="app">${markup}</div>
+    <script src="bundle.js"></script>              
+</body>
+</html>
+
+
+
+    `
+  )
 })
 
 app.listen(3000, () => {
