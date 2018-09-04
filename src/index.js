@@ -4,6 +4,10 @@ import App from './App.js';
 import $ from 'jquery'
 
 
+if (typeof(window) == 'undefined'){
+    global.window = new Object();
+}
+
 hydrate(<App />, document.getElementById('app'));
 
 //Smooth scrolling with jQuery

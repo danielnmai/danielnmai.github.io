@@ -62,7 +62,7 @@ var serverConfig =  {
   target: 'node',
   externals: [nodeExternals()],
   output: {
-    path: __dirname,
+    path: path.join(__dirname, 'ssr'),
     filename: 'server.js',
     publicPath: '/'
   },
@@ -87,16 +87,18 @@ var serverConfig =  {
           {
             loader: 'url-loader',
             options: {
-              limit: 8192
+              limit: 8192,
+              emitFile: false
             }
           }
         ]
       }, {
         test: /\.(woff|woff2)$/,
         use: {
-          loader: "url-loader",
+          loader: 'url-loader',
           options: {
-            limit: 50000
+            limit: 50000,
+            emitFile: false
           }
         }
       }

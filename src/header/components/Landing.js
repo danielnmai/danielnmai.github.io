@@ -1,5 +1,4 @@
 import React from 'react'
-import NavBar from './NavBar'
 // import TypedString from './TypedString'
 import './styles/landing.css'
 
