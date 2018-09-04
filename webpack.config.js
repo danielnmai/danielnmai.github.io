@@ -78,7 +78,9 @@ var serverConfig =  {
         }
       }, {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        use: [
+          'isomorphic-style-loader', { loader: 'css-loader' }
+        ]
       }, {
         test: /\.(png|jpg|gif)$/,
         use: [
