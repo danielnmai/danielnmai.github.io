@@ -47,9 +47,6 @@ app.get("/", (req, res, next) => {
     <script src="bundle.js"></script>              
 </body>
 </html>
-
-
-
     `
   )
 })

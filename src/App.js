@@ -3,6 +3,7 @@ import Header from './header/Header';
 import Center from './center/Center';
 import Footer from './footer/Footer';
 import NavBar from './header/components/NavBar'
+import '../styles/index.css';
 
 class App extends React.Component {
   render() {
