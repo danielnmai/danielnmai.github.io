@@ -7,7 +7,7 @@ class TypedString extends Component {
     super()
     this.state = {isFinished: false}
   }
-  showDefaultText = () => {
+  isFinishedTyping = () => {
     this.setState({isFinished: true})
   }
   render() {
@@ -29,7 +29,7 @@ class TypedString extends Component {
       )
     }
     return (
-      <Typing speed= {100} cursorClassName="cursor" onFinishedTyping={() => this.showDefaultText() } >
+      <Typing speed= {100} cursorClassName="cursor" onFinishedTyping={() => this.isFinishedTyping() } >
         {typedString}
       </Typing>      
     )    
