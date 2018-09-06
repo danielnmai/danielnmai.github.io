@@ -9,6 +9,7 @@ var browserConfig = {
     filename: 'bundle.js',
     publicPath: '/'
   },
+  devtool: 'inline-source-map',
   //Using webpack middleware with express server (for SSR),
   //so no longer need webpack-dev-server
   // devServer: {

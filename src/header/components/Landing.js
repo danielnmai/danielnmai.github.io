@@ -1,14 +1,14 @@
 import React from 'react'
-// import TypedString from './TypedString'
+import TypedString from './TypedString'
 import './styles/landing.css'
 
 
-const Landing = (props) => {
+const Landing = () => {
   return (
     <div id='home' className='landing'>
     <div className="title">
       <h1>Daniel Mai</h1>
-      {/* <TypedString /> */}
+      <TypedString />
     </div>
   </div>
   );
