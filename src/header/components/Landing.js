@@ -2,7 +2,6 @@ import React from 'react'
 import TypedString from './TypedString'
 import './styles/landing.css'
 
-
 const Landing = () => {
   return (
     <div id='home' className='landing'>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Typing, {Backspace, Delay, Reset } from 'react-typing-animation';
+import Typing, {Backspace, Delay } from 'react-typing-animation';
 import './styles/typedString.css'
 
 class TypedString extends Component {

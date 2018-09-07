@@ -1,7 +1,5 @@
 import React from 'react';
 import './styles/navBar.css';
-import { observer } from 'mobx-react';
-import { observable } from 'mobx';
 
 class NavBar extends React.Component {
   render(){
