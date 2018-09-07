@@ -13,7 +13,9 @@ const context = {
     },
   }
 
-hydrate(<ContextProvider context={context} />, document.getElementById('app'));
+hydrate(<ContextProvider context={context}>
+    <App />
+</ContextProvider>, document.getElementById('app'));
 
 //Smooth scrolling with jQuery
 $(document).ready(function(){
