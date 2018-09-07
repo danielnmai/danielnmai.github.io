@@ -1,7 +1,7 @@
 import React from 'react';
 import { hydrate } from 'react-dom';
 import App from './App.js';
-import ContextProvider from './ContextProvider'
+import ContextProvider from './ContextProvider.js'
 import $ from 'jquery'
 
 const context = {

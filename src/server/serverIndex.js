@@ -5,7 +5,7 @@ import cors from "cors"
 import { renderToString } from "react-dom/server"
 import React from 'react'
 import App from '../App.js'
-import ContextProvider from '../ContextProvider'
+import ContextProvider from '../ContextProvider.js'
 
 const app = express()
 const config = require('../../webpack.config.js')
