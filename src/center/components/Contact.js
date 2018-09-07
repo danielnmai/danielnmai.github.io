@@ -1,27 +1,13 @@
 import React, { Component } from 'react'
-import { observer } from 'mobx-react';
-import { observable } from 'mobx';
-import '../styles/contact.css';
+import withStyles from 'isomorphic-style-loader/lib/withStyles';
+import s from '../styles/contact.css';
 
-
-
-@observer
 class Contact extends Component {
-  @observable formInput = null;
-
   constructor(props) {
     super(props)
     this.formInput = { formSubmitted: false, name: '', email: '', message: '' }
     this.handleSubmit = this.handleSubmit.bind(this)
     this.state = { date: new Date() }
-  }
-  componentDidMount(){
-    this.timerId = setInterval(() => this.tick(), 1000)
-  }
-  tick() {
-    this.setState({
-      date: new Date()
-    })
   }
 
 
@@ -77,4 +63,4 @@ const FormOutput = (props) => {
   )
 }
 
-export default Contact
+export default withStyles(s)(Contact)

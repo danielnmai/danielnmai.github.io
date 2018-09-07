@@ -1,23 +1,39 @@
-import React, {Component} from 'react';
-import TypeIt from 'typeit';
-import './styles/typedString.css';
+import React, { Component } from 'react';
+import Typing, {Backspace, Delay } from 'react-typing-animation';
+import s from './styles/typedString.css'
+import withStyles from 'isomorphic-style-loader/lib/withStyles';
 
 class TypedString extends Component {
-  componentDidMount() {
-    const options = {
-      strings: [
-        'Full-Stack Developer', 'Front End Developer', 'Web Designer'
-      ],
-      breakLines: false
-    }
-    new TypeIt(this.el, options)
+  constructor(){
+    super()
+    this.state = {isFinished: false}
   }
-
+  isFinishedTyping = () => {
+    this.setState({isFinished: true})
+  }
   render() {
-    return (<span ref={(el) => {
-        this.el = el
-      }}/>)
+    let typedString
+    if(this.state.isFinished){
+      typedString = <span>Full-Stack Developer</span>
+    } else {
+      typedString = (
+        <div>
+          <Backspace count={20}/>
+          <span>Software Engineer</span>
+          <Delay ms={1000} />
+          <Backspace count={20} />
+          <span>Front End Developer</span>
+          <Delay ms={1000} />
+          <Backspace count={20}/>
+          <span>Full-Stack Developer</span>
+        </div>
+      )
+    }
+    return (
+      <Typing speed= {100} cursorClassName="cursor" onFinishedTyping={() => this.isFinishedTyping() } >
+        {typedString}
+      </Typing>      
+    )    
   }
 }
-
-export default TypedString;
+export default withStyles(s)(TypedString)

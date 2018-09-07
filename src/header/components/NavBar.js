@@ -1,7 +1,6 @@
 import React from 'react';
-import './styles/navBar.css';
-import { observer } from 'mobx-react';
-import { observable } from 'mobx';
+import s from './styles/navBar.css';
+import withStyles from 'isomorphic-style-loader/lib/withStyles';
 
 class NavBar extends React.Component {
   render(){
@@ -16,4 +15,4 @@ class NavBar extends React.Component {
   }
 }
 
-export default NavBar;
+export default withStyles(s)(NavBar)

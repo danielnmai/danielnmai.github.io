@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import '../styles/about.css';
+import s from '../styles/about.css';
+import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import ProfilePic from '../styles/images/profile_pic.jpg';
 
 class About extends Component {
@@ -63,4 +64,4 @@ class About extends Component {
   }
 }
 
-export default About;
+export default withStyles(s)(About)

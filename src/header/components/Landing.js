@@ -1,10 +1,9 @@
 import React from 'react'
-import NavBar from './NavBar'
 import TypedString from './TypedString'
-import './styles/landing.css'
+import s from './styles/landing.css'
+import withStyles from 'isomorphic-style-loader/lib/withStyles';
 
-
-const Landing = (props) => {
+const Landing = () => {
   return (
     <div id='home' className='landing'>
     <div className="title">
@@ -15,4 +14,4 @@ const Landing = (props) => {
   );
 };
 
-export default Landing;
+export default withStyles(s)(Landing)

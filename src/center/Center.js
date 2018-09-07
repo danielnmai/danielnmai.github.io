@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import About from './components/About';
 import Project from './components/Project';
 import Contact from './components/Contact';
-import './styles/center.css';
+import withStyles from 'isomorphic-style-loader/lib/withStyles';
+import s from './styles/center.css';
 
 class Center extends Component {
   render() {
@@ -16,4 +17,4 @@ class Center extends Component {
   }
 }
 
-export default Center;
+export default withStyles(s)(Center);

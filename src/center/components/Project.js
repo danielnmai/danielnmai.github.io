@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import '../styles/project.css';
+import withStyles from 'isomorphic-style-loader/lib/withStyles';
+import s from '../styles/project.css';
 import mBudget from '../styles/images/mbudget.jpg';
 import eCommerce from '../styles/images/e-commerce.jpg';
 import heroku from '../styles/images/heroku.png';
@@ -30,4 +31,4 @@ class Project extends Component {
   }
 }
 
-export default Project;
+export default withStyles(s)(Project)
