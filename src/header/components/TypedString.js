@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Typing, {Backspace, Delay } from 'react-typing-animation';
-import './styles/typedString.css'
+import s from './styles/typedString.css'
+import withStyles from 'isomorphic-style-loader/lib/withStyles';
 
 class TypedString extends Component {
   constructor(){
@@ -35,4 +36,4 @@ class TypedString extends Component {
     )    
   }
 }
-export default TypedString;
+export default withStyles(s)(TypedString)

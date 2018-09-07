@@ -3,7 +3,9 @@ import Header from './header/Header';
 import Center from './center/Center';
 import Footer from './footer/Footer';
 import NavBar from './header/components/NavBar'
-import '../styles/index.css';
+import s from '../styles/index.css';
+import withStyles from 'isomorphic-style-loader/lib/withStyles';
+
 
 class App extends React.Component {
   render() {
@@ -18,4 +20,4 @@ class App extends React.Component {
     </div>);
   }
 }
-export default App;
+export default withStyles(s)(App)

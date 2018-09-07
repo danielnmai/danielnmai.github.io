@@ -29,7 +29,7 @@ var browserConfig = {
         }
       }, {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        use: ['isomorphic-style-loader', { loader: 'css-loader' }]
       }, {
         test: /\.(png|jpg|gif)$/,
         use: [
@@ -67,6 +67,7 @@ var serverConfig =  {
     filename: 'server.js',
     publicPath: '/'
   },
+  devtool: 'inline-source-map',
   module: {
     rules:[
       {

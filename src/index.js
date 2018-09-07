@@ -1,14 +1,19 @@
 import React from 'react';
 import { hydrate } from 'react-dom';
 import App from './App.js';
+import ContextProvider from './ContextProvider'
 import $ from 'jquery'
 
+const context = {
+    insertCss: (...styles) => {
+      const removeCss = styles.map(x => x._insertCss());
+      return () => {
+        removeCss.forEach(f => f());
+      };
+    },
+  }
 
-if (typeof(window) == 'undefined'){
-    global.window = new Object();
-}
-
-hydrate(<App />, document.getElementById('app'));
+hydrate(<ContextProvider context={context} />, document.getElementById('app'));
 
 //Smooth scrolling with jQuery
 $(document).ready(function(){

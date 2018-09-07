@@ -1,6 +1,7 @@
 import React from 'react'
 import TypedString from './TypedString'
-import './styles/landing.css'
+import s from './styles/landing.css'
+import withStyles from 'isomorphic-style-loader/lib/withStyles';
 
 const Landing = () => {
   return (
@@ -13,4 +14,4 @@ const Landing = () => {
   );
 };
 
-export default Landing;
+export default withStyles(s)(Landing)

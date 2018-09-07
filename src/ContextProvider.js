@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types'
+import App from './App'
 
 class ContextProvider extends React.Component {
     static childContextTypes = {
