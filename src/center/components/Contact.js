@@ -9,14 +9,6 @@ class Contact extends Component {
     this.handleSubmit = this.handleSubmit.bind(this)
     this.state = { date: new Date() }
   }
-  componentDidMount(){
-    this.timerId = setInterval(() => this.tick(), 1000)
-  }
-  tick() {
-    this.setState({
-      date: new Date()
-    })
-  }
 
 
   handleSubmit(event) {
@@ -52,8 +44,6 @@ class Contact extends Component {
             <h3>Daniel Mai</h3>
             <p> Milpitas, California</p>
             <p> danielmai1728@gmail.com</p>
-            <div><p>{this.state.date.toLocaleTimeString()}</p></div>
-            <p>{this.timerId} </p>
           </div>
         </div>
       </div>
