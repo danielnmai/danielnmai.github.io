@@ -1,2 +1,5 @@
-node_modules
-online
+#dependencies
+/node_modules
+
+#production
+/online
