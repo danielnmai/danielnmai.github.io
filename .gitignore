@@ -3,3 +3,7 @@
 
 #production
 /online
+
+#server for server side rendering
+/ssr
+
