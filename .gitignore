@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 node_modules/
 ssr/
 .DS_Store
 online/
 
+=======
+#dependencies
+/node_modules
+
+#production
+/online
+>>>>>>> c255e001123dd3d24ca2ca2afec0cf33adbc8e04

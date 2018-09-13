@@ -1,7 +1,4 @@
-My Personal Website Under Construction
-
-Got this published to GitHub with this guide: 
-https://medium.com/dailyjs/building-a-react-component-with-webpack-publish-to-npm-deploy-to-github-guide-6927f60b3220
+My Personal Website
 
 It is built purely on React, compiled with Webpack and transpiled with Babel.
 

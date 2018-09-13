@@ -7,7 +7,7 @@
     "start": "webpack --watch --mode development",
     "server": "nodemon ssr/server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack -p",
+    "build": "webpack -p && cp src/index.html src/CNAME online/dist/",
     "deploy": "gh-pages -b master -d online/dist/",
     "publish-web": "npm run build && npm run deploy"
   },
