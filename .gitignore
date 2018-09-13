@@ -1,9 +1,14 @@
-#dependencies
+# dependencies
 /node_modules
 
-#production
+# testing
+# /coverage
+
+# production
 /online
 
-#server for server side rendering
+#server side rendering
 /ssr
 
+# misc
+.DS_Store

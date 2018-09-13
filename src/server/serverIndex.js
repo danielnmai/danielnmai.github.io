@@ -18,7 +18,7 @@ app.use(webpackDevMiddleware(compiler, {
 }))
 
 //Serve the app with the public bundle.js
-app.use(express.static("online/dist/"))
+// app.use(express.static("online/dist/"))
 
 app.get("/", (req, res, next) => {
   const css = new Set()
