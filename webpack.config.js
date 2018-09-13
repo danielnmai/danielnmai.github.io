@@ -29,7 +29,7 @@ var browserConfig = {
         }
       }, {
         test: /\.css$/,
-        use: ['isomorphic-style-loader', { loader: 'css-loader' }]
+        use: ['isomorphic-style-loader', 'style-loader','css-loader']
       }, {
         test: /\.(png|jpg|gif)$/,
         use: [
@@ -81,8 +81,7 @@ var serverConfig =  {
       }, {
         test: /\.css$/,
         use: [
-          'isomorphic-style-loader', { loader: 'css-loader' }
-        ]
+          'isomorphic-style-loader', 'css-loader']
       }, {
         test: /\.(png|jpg|gif)$/,
         use: [
