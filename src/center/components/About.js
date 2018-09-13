@@ -6,7 +6,11 @@ import ProfilePic from '../styles/images/profile_pic.jpg';
 class About extends Component {
   render() {
     return (
+
       <div id='about' className='about'>
+      <div className="alert alert-primary" role="alert">
+        This is a primary alert—check it out!
+        </div>
         <div className='bio'>
           <h1>About</h1>
           <img id='profile_pic' src={ProfilePic} alt='profile_pic'></img>
