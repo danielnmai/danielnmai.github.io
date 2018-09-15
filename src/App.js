@@ -3,7 +3,7 @@ import Header from './header/Header';
 import Center from './center/Center';
 import Footer from './footer/Footer';
 import NavBar from './header/components/NavBar'
-import s from '../styles/index.css';
+import s from '../styles/index.scss';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 
 

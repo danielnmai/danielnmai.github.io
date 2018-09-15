@@ -90,7 +90,18 @@ var serverConfig =  {
       },
       {
         test: /\.scss$/,
-        use: ['isomorphic-style-loader','css-loader', 'sass-loader']
+        use: ['isomorphic-style-loader','css-loader', {
+          loader: 'postcss-loader', // Run post css actions
+          options: {
+            plugins: function () { // post css plugins, can be exported to postcss.config.js
+              return [
+                require('autoprefixer')
+              ];
+            }
+          }
+        }, {
+          loader: 'sass-loader' // compiles Sass to CSS
+        }]
       },
       {
         test: /\.(png|jpg|gif)$/,

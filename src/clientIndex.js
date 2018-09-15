@@ -3,8 +3,6 @@ import { hydrate } from 'react-dom';
 import App from './App.js';
 import ContextProvider from './ContextProvider.js'
 import $ from 'jquery'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import '../styles/_custom.scss'
 
 const context = {
     insertCss: (...styles) => {
