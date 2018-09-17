@@ -29,8 +29,13 @@ var browserConfig = {
         }
       }, {
         test: /\.css$/,
-        use: ['isomorphic-style-loader', { loader: 'css-loader' }]
-      }, {
+        use: ['isomorphic-style-loader','style-loader','css-loader']
+      },
+      {
+        test: /\.scss$/,
+        use: ['isomorphic-style-loader','style-loader','css-loader', 'sass-loader']
+      },
+      {
         test: /\.(png|jpg|gif)$/,
         use: [
           {
@@ -81,9 +86,24 @@ var serverConfig =  {
       }, {
         test: /\.css$/,
         use: [
-          'isomorphic-style-loader', { loader: 'css-loader' }
-        ]
-      }, {
+          'isomorphic-style-loader', 'css-loader']
+      },
+      {
+        test: /\.scss$/,
+        use: ['isomorphic-style-loader','css-loader', {
+          loader: 'postcss-loader', // Run post css actions
+          options: {
+            plugins: function () { // post css plugins, can be exported to postcss.config.js
+              return [
+                require('autoprefixer')
+              ];
+            }
+          }
+        }, {
+          loader: 'sass-loader' // compiles Sass to CSS
+        }]
+      },
+      {
         test: /\.(png|jpg|gif)$/,
         use: [
           {
