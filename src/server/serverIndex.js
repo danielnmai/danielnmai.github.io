@@ -6,6 +6,8 @@ import { renderToString } from "react-dom/server"
 import React from 'react'
 import App from '../App.js'
 import ContextProvider from '../ContextProvider.js'
+import template from './template'
+import createIndexPage from './createIndexPage'
 
 const app = express()
 const config = require('../../webpack.config.js')
@@ -25,32 +27,15 @@ app.get("/", (req, res, next) => {
   const context = { insertCss: (...styles) => 
     styles.forEach(style => css.add(style._getCss()))}
 
-  const markup = renderToString(
+  let markup = renderToString(
     <ContextProvider context={context}> 
       <App />
     </ContextProvider>
   )
-
-  res.send(
-    `
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Personal Website">
-    <meta name="author" content="Daniel Mai">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daniel Mai</title>
-    <style type="text/css">${[...css].join('')}</style>
-</head>
-<body>
-    <!-- Root Element -->
-    <div id="app">${markup}</div>
-    <script src="bundle.js"></script>              
-</body>
-</html>
-    `
-  )
+  let output = template(css, markup) + "\n"
+  
+  createIndexPage(output)
+  res.send(output)
 })
 
 app.listen(3000, () => {
