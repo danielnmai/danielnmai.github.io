@@ -33,8 +33,12 @@ app.get("/", (req, res, next) => {
     </ContextProvider>
   )
   let output = template(css, markup) + "\n"
-  
+
+  //Update the index page with HTML content for SSR
+  //Only do this in production
   createIndexPage(output)
+
+  
   res.send(output)
 })
 

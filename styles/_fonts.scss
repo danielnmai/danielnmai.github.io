@@ -1,4 +1,33 @@
-$font-family-sans-serif:  "ralewaybold" !important;
-$font-family-serif:       "ralewaybold" !important;
-$font-family-monospace:   "ralewaybold" !important;
-$font-family-base:       $font-family-sans-serif !important;
+@font-face {
+    font-family: 'ralewaylight';
+    src: url('./fonts/raleway-light-webfont.woff2') format('woff2'),
+         url('./fonts/raleway-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ralewaymedium';
+    src: url('./fonts/raleway-medium.woff') format('woff');         
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ralewaybold';
+    src: url('./fonts/raleway-bold.woff') format('woff');         
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ralewayregular';
+    src: url('./fonts/raleway-regular.woff') format('woff');         
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'bebas_neueregular';
+    src: url('./fonts/bebasneue_regular-webfont.woff2') format('woff2'),
+         url('./fonts/bebasneue_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
