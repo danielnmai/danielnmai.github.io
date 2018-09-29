@@ -1,4 +1,4 @@
-.navbar {
+.nav {
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-end;
@@ -12,13 +12,13 @@
   z-index: 1;
 }
 
-.navbar> a   {
+.nav > a   {
   padding: 10px;
 }
-.navbar > a:link, .navbar>a:visited {
+.nav  > a:link, .nav >a:visited {
   color: lavender;
   text-decoration: none;
 }
-.navbar > a:hover, .navbar > a:active {
+.nav  > a:hover, .nav  > a:active {
   color: white;
 }

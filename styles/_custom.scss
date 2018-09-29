@@ -4,7 +4,11 @@
 @import "fonts";
 
 // override bootstrap default variables
-$font-family-sans-serif: 'ralewaymedium', arial, sans-serif;
+$font-family-sans-serif: 'ralewaymedium', arial, sans-serif; 
+
+html body {
+    font-size: 1rem;
+}
 
 
 
