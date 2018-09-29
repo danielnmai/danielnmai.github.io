@@ -34,7 +34,7 @@ app.get("/", (req, res, next) => {
   )
   let output = template(css, markup) + "\n"
   
-  createIndexPage(output)
+  // createIndexPage(output)
   res.send(output)
 })
 
