@@ -33,7 +33,7 @@ class Contact extends Component {
     return (
       <div id='contact' className='contact'>
         <h1>Contact</h1>
-        <div className='body'>
+        <div className='container'>
           <form onSubmit={this.handleSubmit}>
             <input className='form-input' type='text' name='name' placeholder="Name" value={this.formInput.name} onChange={this.handleNameChange} />
             <input className='form-input' type='text' name='email' placeholder="Email" value={this.formInput.email} onChange={this.handleEmailChange} />

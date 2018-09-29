@@ -4,9 +4,9 @@ import withStyles from 'isomorphic-style-loader/lib/withStyles';
 
 const Footer = (props) => {
   return (
-    <div className='footer'>
+    <footer className='footer'>
       <p>Copyright @ DANIEL MAI - 2018 All Rights Reserved. </p>
-    </div>
+    </footer>
   );
 };
 

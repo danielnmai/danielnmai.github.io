@@ -10,7 +10,7 @@
   color: rgb(34, 86, 103);
 }
 
-.body {
+.container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   /* repeat = as many times as you can fit */
