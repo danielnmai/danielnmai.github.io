@@ -9,7 +9,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack -p && cp src/index.html src/CNAME online/dist/",
     "deploy": "gh-pages -b master -d online/dist/",
-    "publish-web": "npm run build && npm run deploy"
+    "publish-web": "yarn build && yarn deploy"
   },
   "keywords": [
     "personal",
@@ -35,7 +35,7 @@
     "mime": "^2.3.1",
     "mobx": "^4.3.0",
     "mobx-react": "^5.1.2",
-    "node-sass": "^4.9.3",
+    "node-sass": "^4.14.1",
     "nodemon": "^1.18.3",
     "npm": "^6.4.0",
     "popper.js": "^1.12.9",
