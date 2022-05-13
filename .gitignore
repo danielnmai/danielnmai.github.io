@@ -1,14 +1,14 @@
 # dependencies
-/node_modules
+node_modules/
 
 # testing
 # /coverage
 
 # production
-/online
+online/
 
 #server side rendering
-/ssr
+ssr/
 
 # misc
 .DS_Store
