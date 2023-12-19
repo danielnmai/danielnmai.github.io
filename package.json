@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check build-only",
-    "deploy": "gh-pages -b master -d dist/ --cname danielmai.com",
+    "deploy": "gh-pages -b master -d dist --cname danielmai.com",
     "publish-web": "yarn build && yarn deploy",
     "preview": "vite preview",
     "test:unit": "vitest --environment jsdom --root src/",
