@@ -1,7 +1,12 @@
 <template>
   <main class="w-full my-10 pl-10 pr-5">
     <h1 class="text-[2rem] font-bold">Email Me</h1>
-    <form ref="form" @submit.prevent="sendEmail" class="flex flex-col">
+    <form
+      id="contact-form"
+      ref="form"
+      @submit.prevent="sendEmail"
+      class="flex flex-col"
+    >
       <label class="my-2">Name</label>
       <input
         type="text"
@@ -28,6 +33,9 @@
       >
         Send
       </button>
+      <div class="flex flex-col">
+        <span id="form-feedback" class="self-center"></span>
+      </div>
     </form>
   </main>
 </template>
@@ -35,6 +43,14 @@
 <script lang="ts">
 import emailjs from "@emailjs/browser";
 
+const showFormFeedback = (message: string, color: string) => {
+  const formResult = document.getElementById("form-feedback");
+  if (formResult) {
+    formResult.innerHTML = "";
+    formResult.style.color = color;
+    formResult.innerHTML = message;
+  }
+};
 export default {
   methods: {
     sendEmail() {
@@ -48,10 +64,15 @@ export default {
         )
         .then(
           (result: any) => {
-            console.log("SUCCESS!", result.text);
+            console.log("SUCCESS...", result.text);
+            showFormFeedback("Message is sent successfully!", "green");
+
+            const form = document.getElementById("contact-form");
+            if (form instanceof HTMLFormElement) form.reset();
           },
           (error: any) => {
             console.log("FAILED...", error.text);
+            showFormFeedback("Error :( Please try again.", "red");
           }
         );
     },
