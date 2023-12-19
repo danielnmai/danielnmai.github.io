@@ -1,0 +1,92 @@
+@import './base.css';
+
+@font-face {
+  font-family: GaramondRegular;
+  src: url('./fonts/Garamond_Regular.ttf');
+}
+@font-face {
+  font-family: GaramondLight;
+  src: url('./fonts/Garamond_Light.ttf');
+}
+
+@font-face {
+  font-family: GaramondBold;
+  src: url('./fonts/Garamond_Bold.ttf');
+}
+
+@font-face {
+  font-family: GaramondItalic;
+  src: url('./fonts/Garamond_Italic.ttf');
+}
+
+body {
+  font-family: GaramondRegular;
+  font-size: 1.25rem;
+  font-weight: normal;
+  background-color: hsla(160, 100%, 37%, 0.4);
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+main {
+  margin-top: 2rem;
+}
+
+/* Underline styles */
+a {
+  display: block;
+  position: relative;
+  padding: 0.1em 0;
+  cursor: pointer;
+  width: fit-content;
+}
+
+/* Fade in */
+a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.15em;
+  background-color: hsla(160, 100%, 37%, 0.4);
+  opacity: 0;
+  transition: opacity 300ms, transform 300ms;
+}
+
+a:hover::after,
+a:focus::after {
+  opacity: 1;
+  transform: translate3d(0, 0.1em, 0);
+}
+
+ /* mobile phone */
+ #app {
+  width: 100%;
+  margin: 0;
+  padding: 2rem;
+  background-color: white;
+}
+
+/* tablet screen */
+@media (min-width: 768px) {
+  #app {
+    width: 100%;
+    margin: 0 5rem;
+  }
+}
+/* large screen */
+@media (min-width: 1024px) {
+  #app {
+    display: grid;
+    margin: 0 5rem;
+    /* left fixed for menu, right takes the rest of space */
+    grid-template-columns: 350px 1fr;
+  }
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
