@@ -11,14 +11,14 @@
       <input
         type="text"
         name="user_name"
-        class="w-1/2 border border-gray rounded px-2 py-1"
+        class="md:w-1/2 border border-gray rounded px-2 py-1"
         required
       />
       <label class="my-2">Email</label>
       <input
         type="email"
         name="user_email"
-        class="w-1/2 border border-gray rounded px-2 py-1"
+        class="md:w-1/2 border border-gray rounded px-2 py-1"
         required
       />
       <label class="my-2">Message</label>

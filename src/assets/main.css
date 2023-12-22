@@ -83,6 +83,7 @@ a:focus::after {
     margin: 0 5rem;
     /* left fixed for menu, right takes the rest of space */
     grid-template-columns: 350px 1fr;
+    max-width: 1280px;
   }
 }
 

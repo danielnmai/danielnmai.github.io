@@ -18,6 +18,22 @@ import Headline from "./components/TheHeadline.vue";
         <div class="flex justify-center lg:justify-start">
           <RouterLink class="mt-2 text-xlg" to="/contact">Contact</RouterLink>
         </div>
+        <div class="flex justify-center lg:justify-start">
+          <a
+            class="mt-2 text-xlg"
+            href="https://danielnmai.medium.com/"
+            target="_blank"
+            >Blog</a
+          >
+        </div>
+        <div class="flex justify-center lg:justify-start">
+          <a
+            class="mt-2 text-xlg"
+            href="https://danielmai.com/flappy-bird/"
+            target="_blank"
+            >Play!</a
+          >
+        </div>
       </nav>
     </div>
   </header>

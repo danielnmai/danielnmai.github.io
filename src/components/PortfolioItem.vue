@@ -11,8 +11,8 @@ defineProps<{
     <a class="font-bold w-max my-5" :href="href" target="_blank" rel="noopener">
       <slot name="heading"></slot>
     </a>
-    <slot name="photo"></slot>
-    <p class="my-5 mb-10">
+    <slot name="media"></slot>
+    <p class="my-5 mb-10 pt-3">
       <slot name="details"></slot>
     </p>
   </div>
