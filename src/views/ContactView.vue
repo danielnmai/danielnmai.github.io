@@ -1,6 +1,9 @@
 <template>
   <main class="w-full my-10 px-5">
-    <h1 class="text-[2rem] font-bold">Email Me</h1>
+    <a class="text-[2rem] font-bold" href="mailto:dan@danielmai.com"
+      >Email Me</a
+    >
+    <h1 class="text-[1.5rem] mt-2">Or drop me a message:</h1>
     <form
       id="contact-form"
       ref="form"

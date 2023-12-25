@@ -52,6 +52,7 @@ a::after {
   height: 0.15em;
   opacity: 0;
   transition: opacity 300ms, transform 300ms;
+  background-color: hsla(160, 100%, 37%, 0.4);
 }
 
 a:hover::after,
