@@ -1,5 +1,5 @@
 <template>
-  <main class="min-h-fit my-10 pl-10 pr-5">
+  <main class="min-h-fit my-10 px-5">
     <h1 class="text-[2rem] font-bold">About Me</h1>
     <p class="mt-5">
       Hi! I am Daniel Mai, a California-based software engineer. I write code to

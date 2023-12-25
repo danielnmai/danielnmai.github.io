@@ -50,7 +50,6 @@ a::after {
   left: 0;
   width: 100%;
   height: 0.15em;
-  background-color: hsla(160, 100%, 37%, 0.4);
   opacity: 0;
   transition: opacity 300ms, transform 300ms;
 }
@@ -74,6 +73,7 @@ a:focus::after {
   #app {
     width: 100%;
     margin: 0 5rem;
+    background-color: white;
   }
 }
 /* large screen */

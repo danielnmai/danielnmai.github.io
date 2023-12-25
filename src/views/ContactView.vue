@@ -1,5 +1,5 @@
 <template>
-  <main class="w-full my-10 pl-10 pr-5">
+  <main class="w-full my-10 px-5">
     <h1 class="text-[2rem] font-bold">Email Me</h1>
     <form
       id="contact-form"

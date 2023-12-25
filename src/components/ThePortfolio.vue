@@ -8,7 +8,7 @@ import PortfolioItem from "./PortfolioItem.vue";
     <template #media>
       <img
         alt="project1_screenshot"
-        class="max-w-[500px]"
+        class="md:max-w-[500px] object-contain"
         src="@/assets/pictures/project1.jpg"
       />
     </template>
@@ -23,12 +23,12 @@ import PortfolioItem from "./PortfolioItem.vue";
     <template #media>
       <img
         alt="racs_screenshot"
-        class="max-w-[500px]"
+        class="md:max-w-[500px] object-contain"
         src="@/assets/pictures/racs.png"
       />
     </template>
     <template #details
-      >React Native app that runs on Android to help more than 80% JUUL
+      ><b>React Native</b> app that runs on Android to help more than 80% JUUL
       retailers comply with government laws of limiting sales to underaged
       people.
     </template>
@@ -38,6 +38,7 @@ import PortfolioItem from "./PortfolioItem.vue";
     <template #heading>Round Up for Schools Clover App (2019-)</template>
     <template #media>
       <iframe
+        class="w-full aspect-video"
         width="560"
         height="315"
         src="https://www.youtube.com/embed/bS5xCFAT90Q?si=rOWaVvBeK8cczQAD"
@@ -59,13 +60,13 @@ import PortfolioItem from "./PortfolioItem.vue";
     <template #media>
       <img
         alt="project2_screenshot"
-        class="max-h-[500px]"
+        class="md:max-h-[600px] object-contain"
         src="@/assets/pictures/project2.jpg"
       />
     </template>
     <template #details
       >A mobile app providing character build guidance for Genshin Impact, a
-      popular RPG game. Written with React Native.
+      popular RPG game. Written with <b>React Native</b>.
     </template>
   </PortfolioItem>
 </template>
