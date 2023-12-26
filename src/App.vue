@@ -36,6 +36,44 @@ import Headline from "./components/TheHeadline.vue";
         </div>
       </nav>
     </div>
+    <hr class="border border-primary my-5" />
+    <div class="flex flex-col">
+      <a
+        class="icon"
+        href="https://www.linkedin.com/in/danielnmai/"
+        target="_blank"
+      >
+        <v-icon
+          class="my-2"
+          name="bi-linkedin"
+          scale="2.0"
+          animation="wrench"
+          hover
+        />
+      </a>
+      <a class="icon" href="https://github.com/danielnmai" target="_blank">
+        <v-icon
+          class="my-2"
+          name="bi-github"
+          scale="2.0"
+          animation="wrench"
+          hover
+        />
+      </a>
+      <a
+        class="icon"
+        href="https://stackoverflow.com/users/8822462/daniel"
+        target="_blank"
+      >
+        <v-icon
+          class="my-2"
+          name="ai-stackoverflow-square"
+          scale="2.0"
+          animation="wrench"
+          hover
+        />
+      </a>
+    </div>
   </header>
   <RouterView />
 </template>

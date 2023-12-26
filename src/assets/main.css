@@ -61,6 +61,10 @@ a:focus::after {
   transform: translate3d(0, 0.1em, 0);
 }
 
+a.icon::after {
+  width: 0;
+}
+
  /* mobile phone */
  #app {
   width: 100%;
