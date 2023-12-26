@@ -39,7 +39,7 @@ import Headline from "./components/TheHeadline.vue";
     <hr class="border border-primary my-5" />
     <div class="flex flex-col">
       <a
-        class="icon"
+        class="icon self-center lg:self-start"
         href="https://www.linkedin.com/in/danielnmai/"
         target="_blank"
       >
@@ -51,7 +51,11 @@ import Headline from "./components/TheHeadline.vue";
           hover
         />
       </a>
-      <a class="icon" href="https://github.com/danielnmai" target="_blank">
+      <a
+        class="icon self-center lg:self-start"
+        href="https://github.com/danielnmai"
+        target="_blank"
+      >
         <v-icon
           class="my-2"
           name="bi-github"
@@ -61,7 +65,7 @@ import Headline from "./components/TheHeadline.vue";
         />
       </a>
       <a
-        class="icon"
+        class="icon self-center lg:self-start"
         href="https://stackoverflow.com/users/8822462/daniel"
         target="_blank"
       >

@@ -17,8 +17,8 @@
       regularly swim, bike, and run.
     </p>
     <p class="mt-5">
-      I have a Bachelor's degree in Computer Science from Northwestern
-      Polytechnic University.
+      I have a Bachelor's degree in Computer Science from San Francisco Bay
+      University.
     </p>
   </main>
 </template>
