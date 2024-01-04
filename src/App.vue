@@ -1,6 +1,18 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from "vue-router";
 import Headline from "./components/TheHeadline.vue";
+import { useHead } from "unhead";
+
+useHead({
+  title: "Daniel Mai website",
+  meta: [
+    {
+      name: "Daniel Mai Personal Website",
+      content:
+        "The website about Daniel Mai, a software engineer based in California, USA",
+    },
+  ],
+});
 </script>
 
 <template>

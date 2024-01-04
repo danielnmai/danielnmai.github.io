@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
+    "@unhead/vue": "^1.8.9",
     "oh-vue-icons": "^1.0.0-rc3",
     "pinia": "^2.0.28",
     "vue": "^3.2.45",
