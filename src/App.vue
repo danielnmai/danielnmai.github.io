@@ -1,7 +1,7 @@
 <script setup lang="ts">
+import { useHead } from "unhead";
 import { RouterLink, RouterView } from "vue-router";
 import Headline from "./components/TheHeadline.vue";
-import { useHead } from "unhead";
 
 useHead({
   title: "Daniel Mai website",
