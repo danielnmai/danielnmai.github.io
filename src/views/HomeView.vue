@@ -45,7 +45,10 @@ import Testimonial from "../components/TestimonialItem.vue";
               developing technical architectures, and leading development teams
               to deliver product solutions flawlessly.
             </p>
-
+          </div>
+        </template>
+        <template #more-content>
+          <div>
             <p class="mt-5">
               One of the things I most appreciated about working with Daniel was
               his ability to communicate effectively with his peers and

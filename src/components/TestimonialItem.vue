@@ -1,14 +1,14 @@
 <script setup lang="ts">
-// defineProps<{
-//   // content: string;
-//   // imageUrl: string;
-//   // name: string;
-//   // title: string;
-// }>();
+import { ref } from "vue";
+const isHidden = ref(false);
 </script>
 
 <template>
-  <div>
+  <div class="flex-row">
     <slot name="content"></slot>
+    <slot name="more-content"></slot>
+    <div class="justify-self-end">
+      <span>Show More</span>
+    </div>
   </div>
 </template>
