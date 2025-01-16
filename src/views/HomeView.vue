@@ -40,6 +40,14 @@ import Testimonial from "../components/TestimonialItem.vue";
             </div>
             <div class="pl-5 mt-5">
               <p>
+                <v-icon
+                  class="my-2"
+                  name="fa-quote-left"
+                  scale="2.0"
+                  fill="#166534"
+                  animation="wrench"
+                  hover
+                />
                 One of the things I most appreciated about working with Daniel
                 was his ability to communicate effectively with his peers and
                 customers. He has excellent interpersonal skills and can clearly

@@ -1,19 +1,27 @@
-import { createApp } from "vue";
 import { createPinia } from "pinia";
+import { createApp } from "vue";
 
-import App from "./App.vue";
-import router from "./router";
-import "./assets/main.css";
 import { createHead } from "@unhead/vue";
+import App from "./App.vue";
+import "./assets/main.css";
+import router from "./router";
 
 import { OhVueIcon, addIcons } from "oh-vue-icons";
 import {
+  AiStackoverflowSquare,
+  BiGithub,
+  BiLinkedin,
+  FaQuoteLeft,
+  FaQuoteRight,
+} from "oh-vue-icons/icons";
+
+addIcons(
   BiLinkedin,
   BiGithub,
   AiStackoverflowSquare,
-} from "oh-vue-icons/icons";
-
-addIcons(BiLinkedin, BiGithub, AiStackoverflowSquare);
+  FaQuoteLeft,
+  FaQuoteRight
+);
 
 const app = createApp(App);
 
