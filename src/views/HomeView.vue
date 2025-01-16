@@ -30,7 +30,29 @@ import Testimonial from "../components/TestimonialItem.vue";
       <h1 class="text-[2rem] font-bold">Testimonials</h1>
       <Testimonial>
         <template #content>
-          <div class="leading-normal">
+          <div class="flex flex-row leading-normal">
+            <div class="mt-5">
+              <img
+                alt="david_stack_testimonial"
+                class="md:max-w-[200px] object-contain rounded-full border-4 border-primary"
+                src="@/assets/pictures/david-stack.jpg"
+              />
+            </div>
+            <div class="pl-5 mt-5">
+              <p>
+                One of the things I most appreciated about working with Daniel
+                was his ability to communicate effectively with his peers and
+                customers. He has excellent interpersonal skills and can clearly
+                articulate technical concepts to both technical and
+                non-technical audiences. He is an excellent listener and is
+                always willing to collaborate with others to find the best
+                solution to a problem.
+              </p>
+            </div>
+          </div>
+        </template>
+        <template #more-content>
+          <div>
             <p class="mt-5">
               Daniel was an invaluable team member at Infuse.us, where he served
               as a Technical Lead and Senior SDE.
@@ -44,18 +66,6 @@ import Testimonial from "../components/TestimonialItem.vue";
               to complex technical problems. His responsibilities included
               developing technical architectures, and leading development teams
               to deliver product solutions flawlessly.
-            </p>
-          </div>
-        </template>
-        <template #more-content>
-          <div>
-            <p class="mt-5">
-              One of the things I most appreciated about working with Daniel was
-              his ability to communicate effectively with his peers and
-              customers. He has excellent interpersonal skills and can clearly
-              articulate technical concepts to both technical and non-technical
-              audiences. He is an excellent listener and is always willing to
-              collaborate with others to find the best solution to a problem.
             </p>
             <p class="mt-5">
               Daniel leads by example and is always willing to help his team
