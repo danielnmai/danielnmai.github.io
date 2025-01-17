@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import PortfolioItem from "./PortfolioItem.vue";
+import PortfolioItem from "./PortfolioComponent.vue";
 </script>
 
 <template>
