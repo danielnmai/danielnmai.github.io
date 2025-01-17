@@ -8,6 +8,7 @@ module.exports = {
       primary: "hsla(160, 100%, 37%, 0.4)",
       green: "#166534",
       gray: "#d1d5db",
+      lightGray: "#f2f2f3",
       white: "#FFFFFF",
       red: "#ef4444",
       primaryHover: "hsla(160, 100%, 37%, 0.3)",

@@ -28,25 +28,25 @@ import Testimonial from "../components/TestimonialItem.vue";
     </div>
     <div class="mt-4">
       <h1 class="text-[2rem] font-bold">Testimonials</h1>
-      <Testimonial>
+      <Testimonial moreContent>
         <template #content>
           <div class="flex flex-row leading-normal">
-            <div class="mt-5">
+            <div class="flex flex-col mt-5">
               <img
                 alt="david_stack_testimonial"
-                class="md:max-w-[200px] object-contain rounded-full border-4 border-primary"
+                class="md:max-w-[200px] object-contain rounded-full mr-5"
                 src="@/assets/pictures/david-stack.jpg"
               />
+              <span class="self-center font-bold mt-5">David Starck</span>
+              <span class="self-center">CEO - Infuse</span>
             </div>
-            <div class="pl-5 mt-5">
-              <p>
+            <div class="pl-5 mt-5 bg-lightGray p-5 rounded-3xl">
+              <p class="italic">
                 <v-icon
                   class="my-2"
                   name="fa-quote-left"
                   scale="2.0"
                   fill="#166534"
-                  animation="wrench"
-                  hover
                 />
                 One of the things I most appreciated about working with Daniel
                 was his ability to communicate effectively with his peers and
@@ -60,7 +60,7 @@ import Testimonial from "../components/TestimonialItem.vue";
           </div>
         </template>
         <template #more-content>
-          <div>
+          <div class="pl-5 bg-lightGray p-5 rounded-3xl">
             <p class="mt-5">
               Daniel was an invaluable team member at Infuse.us, where he served
               as a Technical Lead and Senior SDE.
@@ -85,6 +85,37 @@ import Testimonial from "../components/TestimonialItem.vue";
               I highly recommend Daniel and would love to work with him again in
               the future!
             </p>
+          </div>
+        </template>
+      </Testimonial>
+      <Testimonial>
+        <template #content>
+          <div class="flex flex-row leading-normal">
+            <div class="pl-5 mt-5 bg-lightGray p-5 rounded-3xl">
+              <p class="italic">
+                <v-icon
+                  class="my-2"
+                  name="fa-quote-left"
+                  scale="2.0"
+                  fill="#166534"
+                />
+                It was an absolute pleasure working alongside Daniel. He's very
+                humble and always willing to help others out when needed. He's
+                an extremely talented engineer that can work on projects
+                autonomously, from thinking through product requirements to
+                architecture and implementation. You'll be lucky to have him on
+                your team.
+              </p>
+            </div>
+            <div class="flex flex-col mt-5">
+              <img
+                alt="boris_lippeveld_testimonial"
+                class="md:max-w-[200px] object-contain rounded-full ml-5"
+                src="@/assets/pictures/boris.jpg"
+              />
+              <span class="self-center font-bold mt-5">Boris Lippeveld</span>
+              <span class="self-center text-center mx-5">CTO - EngineIQ </span>
+            </div>
           </div>
         </template>
       </Testimonial>
