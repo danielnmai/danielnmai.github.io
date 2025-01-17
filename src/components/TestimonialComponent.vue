@@ -9,6 +9,8 @@ const props = defineProps<{
 
 import { onUnmounted, ref } from "vue";
 
+// get the width of the screen size
+//  I don't want to display image after content in smaller screens
 const useInnerWidth = () => {
   const width = ref(window.innerWidth);
   const syncWidth = () => (width.value = window.innerWidth);
@@ -19,7 +21,6 @@ const useInnerWidth = () => {
 };
 
 const width = useInnerWidth();
-console.log("width", width);
 
 const getImageURL = () =>
   new URL(`../assets/pictures/${props.imageName}`, import.meta.url).toString();
