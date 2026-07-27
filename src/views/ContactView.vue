@@ -45,6 +45,7 @@
 
 <script lang="ts">
 import emailjs from "@emailjs/browser";
+import { usePageHead } from "../composables/usePageHead";
 
 const showFormFeedback = (message: string, color: string) => {
   const formResult = document.getElementById("form-feedback");
@@ -55,6 +56,14 @@ const showFormFeedback = (message: string, color: string) => {
   }
 };
 export default {
+  setup() {
+    usePageHead({
+      title: "Contact",
+      description:
+        "Get in touch with Daniel Mai, a software engineer based in California.",
+      path: "/contact",
+    });
+  },
   methods: {
     sendEmail() {
       emailjs

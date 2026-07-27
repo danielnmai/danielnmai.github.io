@@ -1,6 +1,16 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import Testimonial from "../components/TestimonialComponent.vue";
+import { usePageHead } from "../composables/usePageHead";
+
+usePageHead({
+  title: "Daniel Mai — Software Engineer",
+  description:
+    "Daniel Mai is a California-based software engineer specializing in full cycle development with React, NodeJS and AWS.",
+  path: "/",
+  standalone: true,
+});
+
 const isHidden = ref(true);
 const showMoreText = () => (isHidden.value = false);
 

@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "build": "run-p type-check build-only && echo danielmai.com > dist/CNAME",
+    "build": "run-p type-check build-only && echo danielmai.com > dist/CNAME && cp dist/index.html dist/404.html && node scripts/generate-route-pages.mjs",
     "deploy": "gh-pages -b master -d dist/",
     "publish-web": "yarn build && yarn deploy",
     "preview": "vite preview",

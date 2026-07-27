@@ -1,16 +1,22 @@
 <script setup lang="ts">
-import { useHead } from "unhead";
+import { useHead } from "@unhead/vue";
 import { RouterLink, RouterView } from "vue-router";
 import Headline from "./components/TheHeadline.vue";
 
+// Site-wide defaults. Each view sets its own title and description, which
+// override these; "%s | Daniel Mai" wraps whatever title the view provides.
 useHead({
-  title: "Daniel Mai website",
+  title: "Daniel Mai",
+  titleTemplate: "%s | Daniel Mai",
   meta: [
     {
-      name: "Daniel Mai Personal Website",
+      name: "description",
       content:
-        "The website about Daniel Mai, a software engineer based in California, USA",
+        "Daniel Mai is a software engineer based in California, working across JavaScript, React, NodeJS and AWS.",
     },
+    { property: "og:site_name", content: "Daniel Mai" },
+    { property: "og:type", content: "website" },
+    { name: "twitter:card", content: "summary" },
   ],
 });
 </script>
