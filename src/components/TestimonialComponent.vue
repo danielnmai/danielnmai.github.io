@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { onUnmounted, ref } from "vue";
+
 const props = defineProps<{
   name: string;
   url: string;
@@ -6,8 +8,6 @@ const props = defineProps<{
   imageName: string;
   imageRightSide?: boolean;
 }>();
-
-import { onUnmounted, ref } from "vue";
 
 // get the width of the screen size
 //  I don't want to display image after content in smaller screens
